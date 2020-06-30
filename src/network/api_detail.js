@@ -11,8 +11,8 @@ export function getDetailData(iid) {
     }),
     request({ url: '/recommend' })
   ]).then(([detail, recommend]) => {
-    detail.data.result.recommendList = recommend.data.data.list;
-    return formatData(detail.data.result);
+    detail.result.recommendList = recommend.data.list;
+    return formatData(detail.result);
   })
 }
 
