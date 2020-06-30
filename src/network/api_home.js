@@ -5,7 +5,7 @@ export function getMultiData() {
     url: '/home/multidata',
     method: 'GET'
   })
-  .then(res => res.data.data)
+  .then(res => res.data)
   .catch(err => {
     console.warn('getMultiData()请求数据出错:', err);
     return {}
@@ -19,7 +19,7 @@ export function getGoodsData(params) {
     method: 'GET',
     params
   })
-  .then(res => res.data.data.list)
+  .then(res => res.data.list)
   .catch(err => {
     console.warn('getGoodsData(params)请求数据出错:', err);
     return [];
