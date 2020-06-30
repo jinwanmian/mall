@@ -5,7 +5,7 @@ export function getCategoryTitle() {
     url: '/category',
     method: 'GET'
   })
-  .then(res => res.data.data);
+  .then(res => res.data);
 }
 
 export function getCategorySubCg(maitKey) {
@@ -17,7 +17,7 @@ export function getCategorySubCg(maitKey) {
     },
     timeout: 1200000
   })
-  .then(res => res.data.data);
+  .then(res => res.data);
 }
 
 export function getCategoryGoodsList(miniWallkey) {
@@ -29,6 +29,5 @@ export function getCategoryGoodsList(miniWallkey) {
       type: 'pop'
     },
     timeout: 1200000
-  })
-  .then(res => res.data);
+  });
 }
