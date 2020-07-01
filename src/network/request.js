@@ -6,10 +6,9 @@ const instance = axios.create({
   responseType: 'json'
 });
 
-instance.interceptors.response.use(res =>{
-  return res.data;
-}, error => {
-  return Promise.reject(error);
-});
+instance.interceptors.response.use(
+  res => res.data,
+  error => Promise.reject(error)
+);
 
 export default instance;
